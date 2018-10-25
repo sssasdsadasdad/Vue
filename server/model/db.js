@@ -13,7 +13,7 @@ module.exports = function (sql, v){
 			if(err){
 				resolve(err)
 			} else {
-				connection.query(sql, v);
+				resolve(connection.query(sql, v))
 			}
 		})
 	})

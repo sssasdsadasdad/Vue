@@ -10,7 +10,7 @@
 		       <template slot="prepend">密码</template>
 	         </el-input>
 	   </div>
-	  <el-button @click="visible = true">登录</el-button>
+	  <el-button @click="login">登录</el-button>
 	  <el-button @click="register">注册</el-button>
 	  
 	</div>
@@ -28,6 +28,11 @@
 		methods: {
 			register(){
 				this.$router.push({path: '/register'});
+			},
+			login(){
+				this.$router.push({
+					path: '/index'
+				})
 			}
 		}
 	}

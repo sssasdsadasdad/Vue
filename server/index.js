@@ -1,24 +1,9 @@
 const koa = require('koa');
 var app = new koa;
-//const cors = require('koa-cors');
 const parser = require('koa-bodyparser')();
-const router = require('koa-router')();
-//router.post('/reg',async(ctx)=>{
-//	
-//          ctx.body = {
-//              code: 200,
-//              token: '登录成功了哟'
-//          };
-//        })
-router.post('/reg', (ctx, next) => {
-	var name = ctx.request.body;
-	ctx.body = {
-	  	code: 2000,
-	  	msg:'注册成功'
-	}
-})
+const router = require('./router')
 app.use(parser);
-app.use(router.routes());
+router(app)
 
 app.listen(3000);
 //class Server {

@@ -20,7 +20,9 @@
     "koa-bodyparser": "^4.2.1",
     "koa-cors": "^0.0.16",
     "koa-router": "^7.4.0",
+    "mysql": "^2.16.0",
     "nodemon": "^1.18.4",
+    "sha1": "^1.1.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
